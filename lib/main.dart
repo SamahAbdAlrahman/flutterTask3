@@ -1,6 +1,4 @@
 import "package:flutter/material.dart";
-import 'dart:math';
-import 'package:flutter/material.dart';
 void main(){
   // runApp(X());
   runApp(
@@ -60,80 +58,3 @@ class _CounterWidgetState extends State<CounterWidget> {
   }
 }
 
-
-
-class samah extends StatelessWidget{
-  @override
-Widget build(BuildContext context) {
-  return Center(
-child: Text('df'),
-    );
-}
- }
-
-
-
- class engsamah extends StatefulWidget{
-  @override
-  engsamah_state createState() => engsamah_state();
-  
- }
- class engsamah_state extends State <engsamah>{
-    @override
-Widget build(BuildContext context) {
-  return Center(
-child: Text('df'),
-    );
-}
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class C extends StatefulWidget{
-  @override
-  C_state createState() => C_state();
-}
-class C_state extends State <C>{
-  @override
-  Widget build(BuildContext context){
-    return Text('df');
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- ''
