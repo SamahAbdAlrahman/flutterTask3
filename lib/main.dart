@@ -1,60 +1,64 @@
 import "package:flutter/material.dart";
+
 void main(){
-  // runApp(X());
-  runApp(
-MainAppRun(),
-    );
-  
-    
+  runApp(app());
 }
-
-
-class MainAppRun extends StatelessWidget{
+class app extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-home: Scaffold(
-  appBar: AppBar(
-    title: Text('Home page',style: TextStyle(color: Colors.deepOrange,fontSize: 30),),
-    centerTitle: true,
+debugShowCheckedModeBanner: false,
 
-  ),
-  body: CounterWidget(),
+      home: Scaffold(
+        // backgroundColor: Colors.white70,
+        appBar: AppBar(
+          backgroundColor: Colors.amber,
+          leading: Icon(Icons.menu , color: Colors.white),
+          title: Text('Samah Abdalrahman' , 
+          style :TextStyle(color: Colors.black ,
+          fontWeight:FontWeight.w700,) ,),
+          centerTitle: true,
+          actions: [
+                        IconButton(
+              icon: Icon(Icons.person,  color: Colors.white),
+              onPressed: () {},
+            ),
+            Icon(Icons.notifications  , color: Colors.white),
 
-),
+          ],
+        ),
+        body: myBody(),
+      ),
     );
   }
 }
-
-class CounterWidget extends StatefulWidget {
-  @override
-  _CounterWidgetState createState() => _CounterWidgetState();
-}
-
-class _CounterWidgetState extends State<CounterWidget> {
-  int counter =0;
+class myBody extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Center(  
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+    return const Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text('Hello! I am developer ', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900,color:Colors.amber)),
+
+          SizedBox(height: 15),
+         Text('Samah Abdalrahman', style: TextStyle(fontSize: 26 , color:Colors.amber ,fontWeight:FontWeight.w700,)),
+         Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+
           children: [
-        ElevatedButton(
-              onPressed: (){
-                  setState(() {
-                  counter++;
-                  });
-                },
-                     child: Text("Counter",style: TextStyle(fontSize: 24,color: Colors.deepOrange)),
-               
-            ),
+            
+            Icon(Icons.phone, color: Colors.amber,),
+            SizedBox(width: 10),
+            Text('0591234567', style: TextStyle(fontSize: 26 , color: Colors.amber,fontWeight:FontWeight.w700 )),
+          ],
+         ),
+        ],
+      ),
+    );
+    
 
-       Text("Counter : $counter", style: TextStyle(fontSize: 24 )),
-
-             ],
-            ),
- 
-    );  
   }
-}
 
+}
