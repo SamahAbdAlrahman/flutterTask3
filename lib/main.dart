@@ -10,7 +10,6 @@ class app extends StatelessWidget{
 debugShowCheckedModeBanner: false,
 
       home: Scaffold(
-        // backgroundColor: Colors.white70,
         appBar: AppBar(
           backgroundColor: Colors.teal,
           leading: Icon(Icons.menu , color: Colors.black),
@@ -19,10 +18,14 @@ debugShowCheckedModeBanner: false,
           fontWeight:FontWeight.w700,) ,),
           centerTitle: true,
           actions: [
-            Icon(Icons.search  , color: Colors.white),
-
-            Icon(Icons.notification_add  , color: Colors.white),
-
+            
+IconButton(
+  onPressed: (){}, icon:  Icon(Icons.search  , color: Colors.white),
+  ) ,
+  IconButton(
+  onPressed: (){}, icon:  Icon(Icons.notification_add  , color: Colors.white),
+  ) ,
+  
           ],
         ),
         body: myBody(),
@@ -53,7 +56,7 @@ class myBody extends StatelessWidget{
             Text('0591234567', style: TextStyle(fontSize: 26 , color: Colors.teal,fontWeight:FontWeight.w700 )),
           ],
          ),
-         
+
         ],
       ),
     );
